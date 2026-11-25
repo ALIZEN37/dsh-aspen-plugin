@@ -1,0 +1,25 @@
+{
+  "name": "dsh-aspen-plugin",
+  "version": "0.1.0",
+  "description": "Drive Aspen Plus V14 from DeepSeek Harness: open a .bkp case, run the simulation, read/write flowsheet tree nodes, list streams and blocks, save. Contributes an MCP server through ctx.mcpManager.register() (8 tools, mcp__aspen__*).",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "aspen_engine.py",
+    "aspen_mcp_server.py",
+    "requirements.txt",
+    "README.md",
+    "deps"
+  ]
+}

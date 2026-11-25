@@ -1,0 +1,15 @@
+# dsh-aspen-plugin — DeepSeek Harness × Aspen Plus (bundle layer)
+#
+# One row only: mount this plugin package. The plugin's apply(ctx) then calls
+# ctx.mcpManager.register('aspen', {...}) for its own lifetime, which is the
+# supported way for a third-party bundle to contribute an MCP server.
+#
+# Do NOT add a row naming '@deepseek-ai/dsh-mcp-client' here: that legacy form
+# resolves the client from the profile's node_modules, where an older copy lacks
+# its @deepseek-ai/dsh-* peers, and the loader drops the row without a message.
+#
+# The server path, interpreter, cwd and env are all computed inside index.js
+# from import.meta.url, so this file stays machine-independent.
+- insert:
+    - id: dsh-aspen-plugin
+      name: 'dsh-aspen-plugin'
